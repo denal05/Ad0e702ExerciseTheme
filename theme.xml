@@ -1,0 +1,9 @@
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
+    <title>AD0-E702 Exercise Theme</title>
+    <parent>Magento/luma</parent>
+    <media>
+        <!-- app/design/frontend/Denal05/Ad0e702ExerciseTheme/media/theme-preview.jpg -->
+        <preview_image>media/theme-preview.png</preview_image>
+    </media>
+</theme>

@@ -5,7 +5,7 @@ The theme preview image was designed using [Canva](https://www.canva.com/).
 
 Make sure to switch to this theme in Admin > Content > Config > Default Store View > Edit > Applied Theme: AD0-E702 Exercise Theme > Save Configuration
 
-1. The first exercise is to override the Onepage Success template.
+(1) The first exercise is to override the Onepage Success template.
 
 Per https://magento.stackexchange.com/a/326297
 ```php
@@ -15,16 +15,21 @@ module-inventory-in-store-pickup-frontend/view/frontend/templates/success.phtml
 In my case, I had to override the second one in app/design/frontend/Vendor/Theme/Magento_InventoryInStorePickupFrontend/templates/success.phtml
 ```
 
+and per https://magento.stackexchange.com/a/376561/122724  
+```php
+It seems Magento 2.4.x requires a Magento_Checkout layout in order to render the Magento_Checkout::success.phtml template.
+```
+
 After the modifications, run ``` bin/magento s:s:d -f -j3 ```
 
-Overrode a Knockout.JS HTML template in Magento_Checkout/web/template/shipping-address/shipping-method-item.html
+(2) Override a Knockout.JS HTML template in Magento_Checkout/web/template/shipping-address/shipping-method-item.html  
 For each change of this template the following steps are required to see the changes:  
 1. ```rm pub/static/frontend/Denal05/Ad0e702ExerciseTheme/en_US/Magento_Checkout/template/shipping-address/shipping-method-item.html```
 2. ```bin/magento s:s:d -f -j3```
 3. ```bin/magento c:f```
 
 
-Overrode Magento/luma theme LESS files and changed the background color in web/css/source/_variables.less  
+(3) Override Magento/luma theme LESS files and changed the background color in web/css/source/_variables.less  
 Per https://developer.adobe.com/commerce/frontend-core/guide/css/preprocess/#server-side-less-compilation  
 
 > In server-side Less compilation mode, to have your changes applied, you need to do the following:  

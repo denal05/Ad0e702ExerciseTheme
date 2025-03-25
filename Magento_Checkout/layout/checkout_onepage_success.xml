@@ -21,6 +21,11 @@
                 <container name="order.success.additional.info" label="Order Success Additional Info"/>
             </block>
             <block class="Magento\Checkout\Block\Registration" name="checkout.registration" template="Magento_Checkout::registration.phtml" cacheable="false"/>
+            <block class="Magento\Cms\Block\Block" name="render.demo.cms.block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string" translate="true">ad0e702_demo_block</argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>
